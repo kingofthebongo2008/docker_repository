@@ -1,3 +1,5 @@
-docker container create -i --name tensorflow_build -h tensorflow_build_host buildtools2017
-docker start -i tensorflow_build
+docker run -it --rm -v %~dp0:C:\tmp -w C:\tmp buildtools2017 cl hello.cpp
+
+
+
 
