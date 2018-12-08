@@ -10,6 +10,8 @@ ADD https://aka.ms/vs/15/release/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
 RUN C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
     --installPath C:\BuildTools `
     --add Microsoft.VisualStudio.Workload.VCTools `
+    --add Microsoft.VisualStudio.Workload.NativeDesktop `
+    --add Microsoft.VisualStudio.Workload.NativeGame `
     --includeRecommended `
  || IF "%ERRORLEVEL%"=="3010" EXIT 0
 
